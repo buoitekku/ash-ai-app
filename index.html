@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ash AI — asystent AI do zarządzania pocztą</title>
+<meta name="description" content="Ash AI to asystent AI, który agreguje skrzynki e-mail, segreguje wiadomości, tworzy podsumowania i przygotowuje wersje robocze odpowiedzi. Nic nie wysyła bez Twojej zgody.">
+<meta name="application-name" content="Ash AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f4ee; --ink:#1f2a24; --green:#3f5a45; --green-deep:#2c3f31;
+    --muted:#6b7268; --line:#dcd8cc; --leaf:#7c9a72;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:'Hanken Grotesk',sans-serif; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(circle at 85% -10%, rgba(124,154,114,.18), transparent 45%);
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px}
+  header{padding:56px 0 0}
+  .brand{display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:600; font-size:22px; letter-spacing:-.01em}
+  .hero{padding:64px 0 48px; border-bottom:1px solid var(--line)}
+  .lede{font-size:19px; color:#39433c; max-width:60ch}
+  section{padding:48px 0; border-bottom:1px solid var(--line)}
+  h1{font-family:'Fraunces',serif; font-weight:600; font-size:clamp(34px,6vw,54px); line-height:1.05; letter-spacing:-.02em; margin:16px 0 20px}
+  h2{font-family:'Fraunces',serif; font-weight:600; font-size:26px; letter-spacing:-.01em; margin-bottom:8px}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:28px}
+  .card h3{font-family:'Fraunces',serif; font-weight:600; font-size:18px; margin-bottom:6px}
+  .card p{color:var(--muted); font-size:15.5px}
+  .tag{display:inline-block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--green); border:1px solid var(--leaf); border-radius:999px; padding:3px 10px; margin-bottom:14px}
+  ul.checks{list-style:none; margin-top:20px; display:grid; gap:12px}
+  ul.checks li{padding-left:30px; position:relative; color:#39433c}
+  ul.checks li::before{content:""; position:absolute; left:0; top:9px; width:14px; height:14px; border-radius:50%; background:var(--leaf); box-shadow:0 0 0 4px rgba(124,154,114,.18)}
+  footer{padding:40px 0 64px; color:var(--muted); font-size:14.5px}
+  footer a{color:var(--green-deep); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:1px}
+  footer a:hover{border-color:var(--green)}
+  .links{display:flex; gap:24px; flex-wrap:wrap; margin-bottom:16px}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Ash AI</div>
+  </header>
+
+  <div class="hero">
+    <h1>Ash AI</h1>
+    <h2 style="font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:20px; color:var(--green); margin:10px 0 22px; letter-spacing:0; line-height:1.3">AI-powered Gmail management assistant</h2>
+    <p class="lede"><strong>Ash AI</strong> is an AI-powered application that connects to your Gmail account via Google OAuth. It reads your emails to classify messages (urgent, newsletters, action items), generates daily briefings, and drafts reply suggestions. <strong>Ash AI never sends any email without your explicit approval.</strong></p>
+    <p style="margin-top:14px; color:#39433c">Ash AI to asystent AI do zarządzania pocztą Gmail. Aplikacja łączy się z Twoim kontem Google, segreguje wiadomości, tworzy codzienne podsumowania i przygotowuje wersje robocze odpowiedzi. Nic nie jest wysyłane bez Twojej zgody.</p>
+  </div>
+
+  <section>
+    <h2>Why Ash AI requests access to your Google account</h2>
+    <p>Ash AI requests access to your Gmail account through Google OAuth in order to:</p>
+    <ul class="checks" style="margin-top:16px">
+      <li><strong>Read your emails</strong> — to classify messages (urgent, newsletters, action items) and generate daily briefings.</li>
+      <li><strong>Draft replies</strong> — to prepare reply suggestions based on incoming messages. No email is ever sent without your explicit approval.</li>
+      <li><strong>Manage labels and read Gmail metadata</strong> — to organise your inbox and track which messages have been handled.</li>
+    </ul>
+    <p style="margin-top:16px; color:var(--muted); font-size:15px">Ash AI does not share your Gmail data with third parties, does not use it for advertising, and complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" style="color:var(--green-deep)">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  </section>
+
+  <section>
+    <h2>Co robi Ash AI</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Triage skrzynki</h3>
+        <p>Tagowanie i segregowanie wiadomości: pilne, do odpowiedzi osobistej, do przekazania zespołowi, newslettery, spam.</p>
+      </div>
+      <div class="card">
+        <h3>Podsumowania</h3>
+        <p>Codzienne briefingi i zwięzłe streszczenia newsletterów, żebyś wiedział, co się dzieje, bez czytania wszystkiego.</p>
+      </div>
+      <div class="card">
+        <h3>Wersje robocze odpowiedzi</h3>
+        <p>Propozycje odpowiedzi dopasowane do Twojego stylu pisania — gotowe do przejrzenia, edycji i zatwierdzenia.</p>
+      </div>
+      <div class="card">
+        <h3>Lista zadań</h3>
+        <p>Z wiadomości wymagających działania powstaje przejrzysta lista „do zrobienia" dla Ciebie i Twojego zespołu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Prywatność wbudowana w działanie</h2>
+    <span class="tag" style="margin-top:14px">Twoje dane, Twoja kontrola</span>
+    <ul class="checks">
+      <li>Każda operacja jest przypisana do konkretnego konta — żadnego mieszania skrzynek.</li>
+      <li>Ash AI nie wysyła e-maili automatycznie. Każda akcja zmieniająca cokolwiek wymaga Twojego zatwierdzenia.</li>
+      <li>Nie sprzedajemy Twoich danych i nie używamy ich do reklam.</li>
+      <li>Możesz w każdej chwili odłączyć konto Google i poprosić o usunięcie danych.</li>
+    </ul>
+    <p style="margin-top:22px; color:var(--muted); font-size:15px">Korzystanie z danych Google przez Ash AI jest zgodne z <a href="https://developers.google.com/terms/api-services-user-data-policy" style="color:var(--green-deep)">Google API Services User Data Policy</a>, w tym z wymaganiami Limited Use. Szczegóły opisuje nasza <a href="privacy/" style="color:var(--green-deep)">polityka prywatności</a>.</p>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="privacy/">Polityka prywatności</a>
+      <a href="terms/">Regulamin</a>
+      <a href="mailto:rybaczekwojciech@gmail.com">Kontakt</a>
+    </div>
+    <p style="margin-bottom:6px">Kontakt / developers: <a href="mailto:rybaczekwojciech@gmail.com">rybaczekwojciech@gmail.com</a>, <a href="mailto:wiktor@batucode.com">wiktor@batucode.com</a></p>
+    © 2026 Ash AI. Aplikacja do prywatnego/wewnętrznego użytku.
+  </footer>
+</div>
+</body>
+</html>
